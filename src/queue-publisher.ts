@@ -32,7 +32,7 @@ const closeConnection = async (connection: Connection): Promise<void> => {
 
 const readCSVFile = (file: string): string[] => {
     const csvFile = readFileSync(file, 'utf8');
-    return csvFile.split('\n');
+    return csvFile.split(',').map(item => item.trim());
 }
 
 const messages: string[] = readCSVFile(file);
