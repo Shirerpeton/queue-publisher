@@ -6,7 +6,7 @@ const program = new Command();
 
 program
     .name('queue-publisher')
-    .description('simple command line script to publish messages to queue')
+    .description('simple command line script to publish messages to rabbitmq queue')
     .version('1.0.0');
 
 program
