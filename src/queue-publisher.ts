@@ -49,7 +49,7 @@ const publishMessage = async (channel: Channel, queueName: string, message: stri
     const channel: Channel = await connection.createChannel();
     await channel.assertQueue(queueName);
     
-    for(const message in messages) {
+    for(const message of messages) {
         await publishMessage(channel, queueName, message, delay);
     }
 
